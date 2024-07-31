@@ -56,7 +56,7 @@ public class SoapClient extends WebServiceGatewaySupport {
         multiplyRequest.setIntA(numberA);
         multiplyRequest.setIntB(numberB);
 
-        SoapActionCallback soapActionCallback = new SoapActionCallback("http://tempuri.org/Subtract");
+        SoapActionCallback soapActionCallback = new SoapActionCallback("http://tempuri.org/Multiply");
 
         MultiplyResponse multiplyResponse = (MultiplyResponse) getWebServiceTemplate().marshalSendAndReceive("http://www.dneonline.com/calculator.asmx", multiplyRequest, soapActionCallback); //es nuestro servicio, ubicalo en el soap:address location
 
@@ -74,7 +74,7 @@ public class SoapClient extends WebServiceGatewaySupport {
         divideRequest.setIntA(numberA);
         divideRequest.setIntB(numberB);
 
-        SoapActionCallback soapActionCallback = new SoapActionCallback("http://tempuri.org/Subtract");
+        SoapActionCallback soapActionCallback = new SoapActionCallback("http://tempuri.org/Divide");
 
         DivideResponse divideResponse = (DivideResponse) getWebServiceTemplate().marshalSendAndReceive("http://www.dneonline.com/calculator.asmx", divideRequest, soapActionCallback); //es nuestro servicio, ubicalo en el soap:address location
 
